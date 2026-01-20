@@ -18,6 +18,7 @@ public class Main {
             System.out.println("1.Persegi");
             System.out.println("2.Persegi panjang");
             System.out.println("3.lingkaran");
+            System.out.println("4.Keluar");
             System.out.print("Masukkan pilihan anda :");
             pilihan = userInput.next();
 
@@ -58,8 +59,10 @@ public class Main {
                 bangunDatar = new Lingkaran("Lingkaran",jarijari);
                 arrayList.add(bangunDatar);
                 bangunDatar.tampilkanInfo();
-
-            }else {
+            }else if (pilihan.equals("4")){
+                running = false;
+                System.out.println("Terima kasih");
+            } else {
                 System.out.println("pilihan yang anda masukkan salah");
                 return ;
             }
