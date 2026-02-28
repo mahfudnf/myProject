@@ -169,7 +169,7 @@ public class ProductControllerTest {
     }
 
     @Test
-    void searchNotFound() throws Exception{
+    void testSearchNotFound() throws Exception{
         mockMvc.perform(
                 get("/api/products").
                         accept(MediaType.APPLICATION_JSON).
@@ -189,7 +189,7 @@ public class ProductControllerTest {
     }
 
     @Test
-    void searchSuccess() throws Exception{
+    void testSearchSuccess() throws Exception{
 
         for (int i = 0 ; i<100 ; i++){
             Product product = new Product();
@@ -243,7 +243,7 @@ public class ProductControllerTest {
     }
 
     @Test
-    void updateProductBadRequest() throws Exception{
+    void testUpdateProductBadRequest() throws Exception{
         Product product = new Product();
         product.setId("D"+UUID.randomUUID());
         product.setName("Degan");
@@ -273,7 +273,7 @@ public class ProductControllerTest {
     }
 
     @Test
-    void updateProductSuccess() throws Exception{
+    void testUpdateProductSuccess() throws Exception{
         Product product = new Product();
         product.setId("D"+UUID.randomUUID());
         product.setName("Degan");
@@ -308,7 +308,7 @@ public class ProductControllerTest {
     }
 
     @Test
-    void deleteProductNotFound() throws Exception{
+    void testDeleteProductNotFound() throws Exception{
         mockMvc.perform(
                 delete("/api/products/S333333").
                         accept(MediaType.APPLICATION_JSON).
@@ -323,7 +323,7 @@ public class ProductControllerTest {
     }
 
     @Test
-    void deleteProductSuccess() throws Exception{
+    void testDeleteProductSuccess() throws Exception{
         Product product = new Product();
         product.setId("D"+UUID.randomUUID());
         product.setName("Degan");

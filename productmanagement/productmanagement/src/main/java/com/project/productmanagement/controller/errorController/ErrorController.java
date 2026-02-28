@@ -1,4 +1,4 @@
-package com.project.productmanagement.controller;
+package com.project.productmanagement.controller.errorController;
 
 import com.project.productmanagement.model.WebResponse;
 import jakarta.validation.ConstraintViolationException;
